@@ -1,28 +1,65 @@
-print ("ola,seja bem vindo ao circo!\n" \
-"lista de preços:entrada inteira R$30, meia entrada R$15")
+# Sistema de estacionamento com veiculos ilimitados
+# Armazena varias placas enquanto o programa roda.
 
-produto = ["meia", "inteira"]
-carrinho = []
-sair = False
-encerrar = ""
+veiculos = []  # Lista para armazenar varios veiculos
 
+# Adicionar veiculo
+def adicionar(placa):
+    placa = placa.upper().strip()
 
-
-
-while sair == False:
-    print (f"oque voce gostaria de comprar?\n\meia entrada [0],entrada inteira [1]\n{produto[0]}\n{produto[1]}")
-    escolha = int(input())
-    if  escolha == 0:
-         print("voce escolheu",produto[0])
-         carrinho.append(produto[0])
-    if  escolha == 1:
-         print("voce escolheu",produto[1])
-         carrinho.append(produto[1])
-         encerrar = input()
-    print("voce deseja sair? S/N")
-    encerrar = input()
-    if encerrar == "S":
-           sair = True 
+    if placa in veiculos:
+        print("O veiculo", placa, "ja esta no patio.")
     else:
-               continue
-print(carrinho)
+        veiculos.append(placa)
+        print("Veiculo", placa, "foi adicionado ao patio.")
+
+# Remover veiculo
+def remover(placa):
+    placa = placa.upper().strip()
+
+    if placa not in veiculos:
+        print("O veiculo", placa, "nao esta no patio.")
+    else:
+        veiculos.remove(placa)
+        print("Veiculo", placa, "removido do patio.")
+
+# Listar veiculos
+def listar():
+    if len(veiculos) == 0:
+        print("O patio esta vazio.")
+    else:
+        print("Veiculos no patio:")
+        for p in veiculos:
+            print("-", p)
+
+# Menu do usuario
+def menu():
+    while True:
+        print("Sistema de Estacionamento")
+        print("1 - Adicionar veiculo")
+        print("2 - Remover veiculo")
+        print("3 - Mostrar veiculos no patio")
+        print("4 - Sair")
+
+        opcao = input("Escolha uma opcao: ")
+
+        if opcao == "1":
+            placa = input("Digite a placa para adicionar: ")
+            adicionar(placa)
+
+        elif opcao == "2":
+            placa = input("Digite a placa para remover: ")
+            remover(placa)
+
+        elif opcao == "3":
+            listar()
+
+        elif opcao == "4":
+            print("Encerrando o sistema.")
+            break
+
+        else:
+            print("Opcao invalida.")
+
+
+menu()

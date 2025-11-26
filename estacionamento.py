@@ -39,8 +39,8 @@ print(f"valor total:{valorTotal}\n")
 
 
 while sair == False:
-    print(pagamento)
-    print (f"escolha uma forma de pagamento:\n\pix [0],debito [1],credito [2],dinheiro[3]\n{pagamento[0]}\n{pagamento[1]}\n{pagamento[2]}\n{pagamento[3]}")
+
+    print (f"escolha uma forma de pagamento:\npix [0],debito [1],credito [2],dinheiro[3]\n{pagamento[0]}\n{pagamento[1]}\n{pagamento[2]}\n{pagamento[3]}")
     escolha = int(input())
     if  escolha == 0:
          print("voce escolheu",pagamento[0])
