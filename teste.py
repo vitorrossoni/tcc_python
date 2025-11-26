@@ -36,11 +36,9 @@ def listar():
 
 def gerar_tempos():
     month = random.randint(1, 12)
-    entrada = datetime.datetime(2025, month, random.randint(1, 28),
-                                random.randint(0, 23), random.randint(0, 59), 0)
+    entrada = datetime.datetime(2025, month, random.randint(1, 31), random.randint(0, 23), random.randint(0, 59), 0)
 
-    saida = datetime.datetime(2025, month, random.randint(entrada.day, 28),
-                              random.randint(entrada.hour, 23), random.randint(0, 59), 0)
+    saida = datetime.datetime(2025, month, (entrada.day, 31),random.randint(entrada.hour, 23), random.randint(0, 59), 0)
 
     return entrada, saida
 
@@ -72,7 +70,24 @@ def pagamento():
         print("Opção inválida. Pagamento definido como dinheiro.")
         return "dinheiro"
 
+def salvar_recibo(placa, entrada, saida, horas, total, metodo):
+    recibo = (
+        "=========== RECIBO ===========\n"
+        f"Veículo: {placa}\n"
+        f"Entrada: {entrada}\n"
+        f"Saída: {saida}\n"
+        f"Tempo total: {horas} horas\n"
+        f"Valor total: R$ {total}\n"
+        f"Forma de pagamento: {metodo}\n"
+        "==============================\n"
+    )
 
+    nome_arquivo = f"recibo_{placa}.txt"
+
+    with open(nome_arquivo, "w", encoding="utf-8") as arq:
+        arq.write(recibo)
+
+    print(f"Recibo salvo como: {nome_arquivo}")
 
 
 def menu():
@@ -120,7 +135,7 @@ def menu():
             print("Valor total: R$", total)
             print("Forma de pagamento:", metodo)
             print("==============================")
-
+            salvar_recibo(placa, entrada, saida, horas, total, metodo)
             remover(placa)
 
         elif opcao == "5":
@@ -132,3 +147,5 @@ def menu():
 
 
 menu()
+
+

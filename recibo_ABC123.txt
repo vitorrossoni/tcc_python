@@ -1,0 +1,8 @@
+=========== RECIBO ===========
+Veículo: ABC123
+Entrada: 2025-03-07 22:03:00
+Saída: 2025-03-08 22:39:00
+Tempo total: 0 horas
+Valor total: R$ 0
+Forma de pagamento: credito
+==============================
