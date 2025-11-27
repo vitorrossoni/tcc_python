@@ -1,0 +1,8 @@
+=========== RECIBO ===========
+Veículo: PPP222
+Entrada: 2025-01-23 15:47:00
+Saída: 2025-01-27 16:54:00
+Tempo total: 1 horas
+Valor total: R$ 10
+Forma de pagamento: credito
+==============================

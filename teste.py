@@ -38,7 +38,7 @@ def gerar_tempos():
     month = random.randint(1, 12)
     entrada = datetime.datetime(2025, month, random.randint(1, 31), random.randint(0, 23), random.randint(0, 59), 0)
 
-    saida = datetime.datetime(2025, month, (entrada.day, 31),random.randint(entrada.hour, 23), random.randint(0, 59), 0)
+    saida = datetime.datetime(2025, month, random.randint(entrada.day, 31),random.randint(entrada.hour, 23), random.randint(0, 59), 0)
 
     return entrada, saida
 
