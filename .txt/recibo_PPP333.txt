@@ -1,0 +1,8 @@
+=========== RECIBO ===========
+Veículo: PPP333
+Entrada: 2025-11-21 20:14:00
+Saída: 2025-11-03 23:02:00
+Tempo total: 3 horas
+Valor total: R$ 30
+Forma de pagamento: credito
+==============================

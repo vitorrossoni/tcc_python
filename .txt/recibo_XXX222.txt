@@ -1,0 +1,8 @@
+=========== RECIBO ===========
+Veículo: XXX222
+Entrada: 2025-12-21 21:33:00
+Saída: 2025-12-11 22:12:00
+Tempo total: 1 horas
+Valor total: R$ 10
+Forma de pagamento: debito
+==============================

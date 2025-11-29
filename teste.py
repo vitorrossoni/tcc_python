@@ -35,10 +35,11 @@ def listar():
 
 
 def gerar_tempos():
+    day = random.randint(1, 30)
     month = random.randint(1, 12)
-    entrada = datetime.datetime(2025, month, random.randint(1, 31), random.randint(0, 23), random.randint(0, 59), 0)
+    entrada = datetime.datetime(2025, month, day, random.randint(0, 23), random.randint(0, 59), 0)
 
-    saida = datetime.datetime(2025, month, random.randint(entrada.day, 31),random.randint(entrada.hour, 23), random.randint(0, 59), 0)
+    saida = datetime.datetime(2025, month, day, random.randint(entrada.hour, 23), random.randint(0, 59), 0)
 
     return entrada, saida
 

@@ -1,0 +1,8 @@
+=========== RECIBO ===========
+Veículo: EEE333
+Entrada: 2025-02-07 14:47:00
+Saída: 2025-02-05 14:38:00
+Tempo total: 0 horas
+Valor total: R$ 0
+Forma de pagamento: pix
+==============================
